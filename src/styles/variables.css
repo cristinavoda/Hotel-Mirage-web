@@ -1,0 +1,11 @@
+:root {
+  --color-text: #111;
+  --color-primary: #25242e;
+  --color-dark: #0f2a3a;
+  --bg-light: #ffffff;
+
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --transition-soft: 0.6s ease;
+}
