@@ -201,14 +201,15 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   .navbar {
     width: 100%;
     margin-top: 10%;
+    margin-left: 15px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 0.3rem;
     box-shadow: 3px 2px 8px rgba(179, 179, 182, 0.1);
     transition: background-color 0.3s ease;
-    color:#676868;
+    color:#343a3a;
   }
   .nav-link {
   position: relative;
@@ -219,7 +220,7 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   color: #111010;
   text-decoration: none;
   list-style: none;
-  padding: 0.25rem 0;
+  padding: 0.15rem -0.4rem;
   transition: color 0.3s ease;
   
 }
