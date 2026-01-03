@@ -194,10 +194,8 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   opacity: 0;
   transform: translateY(-15px);
 }
- @media (max-width: 768px) {ç
-  navbar.sticky {
-    position: relative;
-  }
+ @media (max-width: 768px) {
+  
   .navbar {
     width: 100%;
     margin-top: 10%;
