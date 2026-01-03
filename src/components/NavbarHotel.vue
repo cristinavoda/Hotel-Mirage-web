@@ -211,6 +211,16 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
     transition: background-color 0.3s ease;
     color:#343a3a;
   }
+  .nav-list {
+  justify-content: center;
+  max-width: 1200px;
+  margin-top:80px;
+  padding: 0.8rem 0.1rem;
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  text-decoration: none;
+}
   .nav-link {
   position: relative;
   font-size: 0.95rem;
