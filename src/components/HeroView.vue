@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-// por ahora no necesitamos JS
+
 </script>
 
 <style scoped>
@@ -29,21 +29,20 @@
   position: relative;
   margin-top: 1rem;
   height: 100vh;
- 
   overflow: hidden;
   background: white;
 }
 
-/* VIDEO */
+
 .hero-video {
   width: 120%;
   height: 100%;
   object-fit: cover;
-  margin-left: -10%;
+  
   
 }
 
-/* OVERLAY SUAVE (lujo) */
+
 .hero::after {
   content: '';
   position: absolute;

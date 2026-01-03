@@ -129,5 +129,21 @@ onUnmounted(() => {
   background: linear-gradient(50deg, rgb(159, 162, 163), #ffffff);
   }
 
-  
+   @media (max-width: 768px) {
+    .field input,
+.field select {
+  border: 1px solid #d1cece;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.5rem;
+}
+.cta {
+  margin-left: auto;
+  background: transparent; 
+  color: black;
+  border: 1px solid rgb(179, 175, 175);
+  padding: 0.4rem 0.4rem;
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+   }
 </style>

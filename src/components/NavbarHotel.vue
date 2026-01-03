@@ -1,29 +1,38 @@
 <template>
   <nav class="['navbar', { sticky: isSticky }]">
-    <ul class="nav-list"> 
+
+
+    <div class="hamburger" @click="toggleMenu">
+      <div :class="{ bar: true, open: isOpen }"></div>
+      <div :class="{ bar: true, open: isOpen }"></div>
+      <div :class="{ bar: true, open: isOpen }"></div>
+    </div>
+
+    
+    <ul class="nav-list", { open: isOpen }> 
 
       <li class="nav-item active">
-        <router-link to="/" class="nav-link">
+        <router-link to="/" @click="closeMenu" class="nav-link">
           Inicio
         </router-link>
       </li>
 
-      <li class="nav-item "> <router-link to="/habitaciones" class="nav-link"> Habitaciones</router-link>
+      <li class="nav-item "> <router-link to="/habitaciones" @click="closeMenu" class="nav-link"> Habitaciones</router-link>
         
       </li>
 
       <li class="nav-item">
-        <router-link to="/experiencias" class="nav-link">
+        <router-link to="/experiencias" @click="closeMenu"class="nav-link">
           Experencias
         </router-link>
       </li>
 
-      <li class="nav-item"><router-link to="/galeria" class="nav-link">
+      <li class="nav-item"><router-link to="/galeria"  @click="closeMenu" class="nav-link">
           Galeria
         </router-link></li>
       
  <li class="nav-item">
-  <router-link to="/contacto" class="nav-link">
+  <router-link to="/contacto"  @click="closeMenu" class="nav-link">
     Contacto
   </router-link>
 </li>
@@ -32,15 +41,27 @@
  <div class="line-separator"></div> 
   </nav>
 </template>
+
+
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRoute } from 'vue-router'
 
 const isSticky = ref(false)
 
 const handleScroll = () => {
   isSticky.value = window.scrollY > 80
 }
+const isOpen = ref(false)
+const route = useRoute()
 
+function toggleMenu() {
+  isOpen.value = !isOpen.value
+}
+
+function closeMenu() {
+  isOpen.value = false
+}
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 })
@@ -52,6 +73,7 @@ onUnmounted(() => {
 
 <style scoped>
 .navbar {
+   position: relative;
   background: rgba(255,255,255,0.95);
   transition: all 0.3s ease;
    text-decoration: none;
@@ -130,6 +152,77 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   background-size: 250% 250%;}
 
 
- 
- 
+ .hamburger {
+  display: none;
+  flex-direction: column;
+  margin-right: 2rem;
+  gap: 5px;
+  cursor: pointer;
+  color: #889191;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 2px;
+  color: #889191;
+}
+.bar {
+  width: 25px;
+  color: #949b9b;
+  background-color: #e7ecec;
+  box-shadow: 1px 1px  #f5f7f7;
+  transition: all 0.3s ease;
+  margin-right: 3rem;
+}
+
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar.open:nth-child(2) {
+  opacity: 1;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.menu-fade-enter-active,
+.menu-fade-leave-active {
+  transition: all 0.4s ease;
+}
+.menu-fade-enter-from,
+.menu-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-15px);
+}
+ @media (max-width: 768px) {ç
+  navbar.sticky {
+    position: relative;
+  }
+  .navbar {
+    width: 100%;
+    margin-top: 10%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    box-shadow: 3px 2px 8px rgba(179, 179, 182, 0.1);
+    transition: background-color 0.3s ease;
+    color:#676868;
+  }
+  .nav-link {
+  position: relative;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #111010;
+  text-decoration: none;
+  list-style: none;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;
+  
+}
+
+}
 </style>
