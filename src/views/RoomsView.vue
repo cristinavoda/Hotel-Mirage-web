@@ -31,18 +31,11 @@ import { ref } from 'vue'
 
 const rooms = ref([
   {
-    id: 1,
-    name: 'Habitación doble, camas individuales',
-    type: 'individual',
-    description: 'Habitación para dos personas, con todas las comodidades.',
-    image: '/images/habitacion.jpg'
-  },
-  {
-    id: 2,
-    name: 'Habitación Doble',
-    type: 'doble',
-    description: 'Espaciosa habitación para dos, perfecta para parejas o amigos.',
-    image: '/images/habitacion2.jpg'
+    id: 4,
+    name: 'Suite luxe',
+    type: 'suite',
+    description: 'Lujo, espacio y vistas panorámicas, la experiencia definitiva.',
+    image: '/images/suite3.png'
   },
   {
     id: 3,
@@ -51,13 +44,24 @@ const rooms = ref([
     description: 'Comodidad, espacio  y modernidad',
     image: '/images/suite2.jpg'
   },
+   
    {
-    id: 4,
-    name: 'Suite luxe',
-    type: 'suite',
-    description: 'Lujo, espacio y vistas panorámicas, la experiencia definitiva.',
-    image: '/images/suite3.png'
-  }
+    id: 1,
+    name: 'Habitación Doble',
+    type: 'doble',
+    description: 'Espaciosa habitación para dos, perfecta para parejas .',
+    image: '/images/habitacion2.jpg'
+  },
+  {
+    id: 2,
+    name: 'Habitación doble, camas individuales',
+    type: 'individual',
+    description: 'Habitación para dos personas,parejas o amigos, con todas las comodidades.',
+    image: '/images/habitacion.jpg'
+  },
+ 
+ 
+   
 ])
 </script>
 

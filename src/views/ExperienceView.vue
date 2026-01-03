@@ -24,10 +24,10 @@
 <script setup>
 const experiences = [
   {
-    id: 1,
-    title: 'Spa & Wellness',
-    description: 'Rituales de relajación con vistas al mar.',
-    image: '../images/experiences/spa2.jpg'
+    id: 3,
+    title: 'Piscina & Rooftop',
+    description: 'Atardeceres únicos en nuestra terraza.',
+    image: '../images/experiences/piscina2.jpg'
   },
   {
     id: 2,
@@ -35,12 +35,14 @@ const experiences = [
     description: 'Cocina mediterránea con producto local.',
     image: '../images/experiences/restaurante.png'
   },
+ 
   {
-    id: 3,
-    title: 'Piscina & Rooftop',
-    description: 'Atardeceres únicos en nuestra terraza.',
-    image: '../images/experiences/piscina2.jpg'
+    id: 1,
+    title: 'Spa & Wellness',
+    description: 'Rituales de relajación con vistas al mar.',
+    image: '../images/experiences/spa2.jpg'
   },
+  
   {
     id: 4,
     title: 'Fitness & Yoga',
