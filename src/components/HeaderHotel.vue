@@ -178,27 +178,14 @@
 @media (max-width: 768px) {
   .header-container {
     grid-template-columns: 1fr auto;
-    height: 40px;
   }
 
-.header-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-}
-
   .header-info {
-  justify-self: center;
-  font-size: 0.5rem;
-  color: #555;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  border-bottom: 2px solid rgba(0,0,0,0.05);
+    display: none;
   }
 
   .brand-name {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 </style>
