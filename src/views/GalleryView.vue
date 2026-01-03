@@ -64,7 +64,7 @@ const images = ref([
 
 .gallery-item img {
   width: 100%;
-  height: 250px;
+  height: 650px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
