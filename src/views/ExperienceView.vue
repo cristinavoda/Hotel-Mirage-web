@@ -64,7 +64,8 @@ const experiences = [
 }
 
 .experience-header h1 {
-  font-size: 2.5rem;
+  margin-top: 0;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 

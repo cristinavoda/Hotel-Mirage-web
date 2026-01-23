@@ -81,7 +81,7 @@ onUnmounted(() => {
 align-items: center;
 }
 .navbar.sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -90,8 +90,7 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
 .nav-list {
   justify-content: center;
   max-width: 1200px;
-  margin-top:80px;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 0.5rem;
   display: flex;
   gap: 2.5rem;
   list-style: none;
@@ -100,9 +99,8 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
 
 .nav-link {
   position: relative;
-  font-size: 0.95rem;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.3rem;
+  font-family:  system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.7rem;
   font-weight: 500;
   color: #111010;
   text-decoration: none;
@@ -117,7 +115,7 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   content: '';
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: 1px;
   width: 100%;
   height: 2px;
   background-color: #110436; 
@@ -137,18 +135,20 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
 
 
 .router-link-active::after {
-  transform: scaleX(1.2);
+  transform: scaleX(1.1);
 }
 
 .router-link-active {
   color: #24222c;
   border-bottom: 1px solid #110436;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 .line-separator {
-  width: 100%;
+  width: 99%;
   height: 0.5px;
   margin: 1rem auto;
-  background: linear-gradient(90deg, rgb(150, 153, 155), #ffffff);
+  background: linear-gradient(90deg, rgb(92, 94, 95), #eeeded);
   background-size: 250% 250%;}
 
 
@@ -200,8 +200,7 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
     width: 100%;
     margin-top: 10%;
     margin-left: 15px;
-    height: 40px;
-    display: flex;
+   display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.1rem 0.3rem;
@@ -212,7 +211,7 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   .nav-list {
   justify-content: center;
   max-width: 1200px;
-  margin-top:80px;
+  margin-top:10px;
   padding: 0.8rem 0.1rem;
   display: flex;
   gap: 1.5rem;
@@ -221,14 +220,14 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
 }
   .nav-link {
   position: relative;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
+  gap: 6rem;
+  font-weight: 500;
   color: #111010;
   text-decoration: none;
   list-style: none;
-  padding: 0.15rem -0.4rem;
+  padding: 0.5rem 0.4rem;
   transition: color 0.3s ease;
   
 }

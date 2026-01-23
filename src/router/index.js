@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 
+
 import HomeView from '../views/HomeView.vue'
+import ReservasView from '../views/ReservasView.vue'
 import RoomsView from '../views/RoomsView.vue'
 import ExperienceView from '../views/ExperienceView.vue'
 import GalleryView from '../views/GalleryView.vue'

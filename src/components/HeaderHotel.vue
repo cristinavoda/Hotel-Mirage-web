@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header-container">
 
-      <!-- IZQUIERDA: LOGO / NOMBRE -->
+     
       <div class="header-brand">
         <span class="brand-hotel">Hotel</span>
         <span class="brand-mirage">
@@ -12,7 +12,7 @@
         <span class="stars">★★★★★</span>
       </div>
 
-      <!-- CENTRO: INFO -->
+      
       <div class="header-info">
         <span class="location">Bellavista</span>
         <span class="separator">·</span>
@@ -29,7 +29,7 @@
 
       </div>
 
-      <!-- DERECHA: CTA -->
+      
       <div class="header-cta">
         <button class="btn-reserve">Reservar</button>
       </div>
@@ -46,8 +46,8 @@
 <style scoped>
 
 .header {
-  position: fixed;
-  top: 0;
+  position: sticky;
+   margin-top: 8px;
   width: 100%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.92);
@@ -140,6 +140,7 @@
 .separator {
   opacity: 0.5;
   color: rgb(13, 13, 14)
+  
 }
 
 
@@ -164,17 +165,17 @@
   color: black;
   border: 1px solid rgb(165, 160, 160);
   padding: 0.7rem 1.4rem;
-  font-size: 0.85rem;
+  font-size: 0.99rem;
   cursor: pointer;
 }
  .line-separator {
-  width: 100%;
+  width: 99%;
   height: 0.4px;
   color:#555;
   background: linear-gradient(90deg, rgb(130, 133, 134), #ffffff);
   background-size: 250% 250%;}
 
-/* MOBILE */
+
 @media (max-width: 768px) {
   .header-container {
     grid-template-columns: 1fr auto;

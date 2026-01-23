@@ -72,7 +72,7 @@ const rooms = ref([
 }
 
 .rooms-intro h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 0.8rem;
   color: var(--color-dark);
 }
@@ -133,7 +133,10 @@ const rooms = ref([
   text-decoration: none;
   transition: background 0.3s ease;
 }
-
+.room-info .btn {
+  background: white;
+  border: none;
+}
 .room-info .btn:hover {
   background: #e9e9eb;
 }

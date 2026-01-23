@@ -12,26 +12,7 @@ En Hotel Mirage, cada espacio invita a disfrutar, relajarse y desconectar. Desde
 Descubre más y empieza a planificar tu próxima experiencia.</p>
     </section>
 
- <hr class="section-divider" />
 
-    <section class="highlights">
-      <div class="highlight">
-        <img src="../assets/images/piscina.jpg" alt="Piscina">
-        <h3>Piscina Infinity</h3>
-      </div>
-      <div class="highlight">
-        <img src="../assets/images/spa.jpg" alt="Spa">
-        <h3>Spa & Bienestar</h3>
-      </div>
-      <div class="highlight">
-        <img src="../assets/images/tapas.png" alt="Restaurante">
-        <h3>Gastronomía Premium</h3>
-      </div>
-      <div class="highlight">
-        <img src="../assets/images/vistas.jpg" alt="Vistas">
-        <h3>Vistas Inigualables</h3>
-      </div>
-    </section>
 
      <hr class="section-divider" />
 
@@ -40,26 +21,31 @@ Descubre más y empieza a planificar tu próxima experiencia.</p>
       <div class="highlight">
         <img src="../assets/images/piscina.jpg" alt="Piscina">
         <h3>Piscina Infinity</h3>
+        <p>Un espacio exclusivo donde el agua se funde con el horizonte, ideal para relajarse al atardecer.</p>
       </div>
 
       <div class="highlight">
         <img src="../assets/images/spa.jpg" alt="Spa">
         <h3>Spa & Bienestar</h3>
+        <p>Tratamientos pensados para cuerpo y mente en un ambiente de calma absoluta.</p>
       </div>
 
       <div class="highlight">
         <img src="../assets/images/tapas.png" alt="Restaurante">
         <h3>Gastronomía Premium</h3>
+        <p>Cocina de autor elaborada con productos selectos y sabores cuidadosamente equilibrados.</p>
       </div>
 
       <div class="highlight">
         <img src="../assets/images/vistas.jpg" alt="Vistas">
         <h3>Vistas Inigualables</h3>
+        <p>Panorámicas únicas que convierten cada momento en una experiencia memorable.</p>
       </div>
 
 <div class="highlight">
         <img src="../assets/images/suite1.png" alt="Vistas">
         <h3>Habitaciones de ensueño </h3>
+        <p>Diseño elegante, máximo confort y detalles pensados para un descanso perfecto.</p>
       </div>
 
 
@@ -121,7 +107,7 @@ const form = ref({
 function handleSubmit() {
   console.log('Formulario enviado:', form.value)
 
-  // reset opcional
+ 
   form.value = {
     name: '',
     email: '',
@@ -132,6 +118,11 @@ function handleSubmit() {
 </script>
 
 <style scoped>
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .home-view {
   display: flex;
   flex-direction: column;
@@ -145,7 +136,7 @@ function handleSubmit() {
 }
 
 .intro h1 {
-   font-family: 'Playfair Display', serif;
+   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 500;
   letter-spacing: 0.02em;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -158,6 +149,7 @@ function handleSubmit() {
   line-height: 1.6;
   font-size: 1.05rem;
   letter-spacing: 0.01em;
+ margin-top:  10px;
 }
 
 .highlights {
@@ -184,6 +176,16 @@ function handleSubmit() {
   text-align: center;
   margin-top: 0.8rem;
   color: var(--color-dark);
+  font-size: 2rem;
+  padding: 2rem 2rem;
+}
+ .highlight p {
+
+   text-align: center;
+  margin-top: -50px;
+  color: var(--color-dark);
+  font-size: 1.3rem;
+  padding: 2rem 2rem;
 }
 .section-divider::before {
   content: "";

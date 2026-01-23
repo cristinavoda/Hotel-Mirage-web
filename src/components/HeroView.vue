@@ -28,7 +28,8 @@
 .hero {
   position: relative;
   margin-top: 1rem;
-  height: 100vh;
+  min-height: -webkit-fill-available;
+
   overflow: hidden;
   background: white;
 }

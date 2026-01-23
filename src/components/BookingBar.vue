@@ -126,7 +126,7 @@ onUnmounted(() => {
   height: 0.5px;
   margin: 0.5rem auto;
   color: #575353;
-  background: linear-gradient(50deg, rgb(159, 162, 163), #ffffff);
+  background: linear-gradient(50deg, rgb(159, 162, 163), #555353);
   }
 
    @media (max-width: 768px) {
@@ -134,7 +134,7 @@ onUnmounted(() => {
 .field select {
   border: 1px solid #d1cece;
   padding: 0.1rem 0.1rem;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   left: 0;
 }
 .cta {
