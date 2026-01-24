@@ -129,24 +129,49 @@ onUnmounted(() => {
   background: linear-gradient(50deg, rgb(159, 162, 163), #555353);
   }
 
-   @media (max-width: 768px) {
-    
-    .field input,
-.field select {
-  border: 1px solid #d1cece;
-  padding: 0.1rem 0.1rem;
-  font-size: 0.8rem;
-  left: 0;
+
+.booking-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.2rem;
 }
-.cta {
-  margin-left: auto;
-  background: transparent; 
-  color: black;
-  border: 1px solid rgb(179, 175, 175);
-  padding: 0.1rem 0.1rem;
-  font-size: 0.3rem;
-  cursor: pointer;
+
+@media (max-width: 768px) {
+
+  .booking-inner {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0.6rem;
+  }
+
   
+  .field {
+    width: 48%;
+  }
+
+  .field label {
+    font-size: 0.7rem;
+  }
+
+  .field input,
+  .field select {
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  
+  .booking-btn {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
 }
-   }
+
+   
 </style>
