@@ -165,10 +165,9 @@ onUnmounted(() => {
 
   
   .booking-btn {
-    width: 100%;
     margin-left: 0;
     text-align: center;
-    padding: 0.6rem;
+    padding: 0.4rem 0.6rem;
     font-size: 0.9rem;
   }
 }
