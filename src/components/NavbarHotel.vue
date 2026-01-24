@@ -206,19 +206,19 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
+  gap: 5px;
+  cursor: point5r;
   z-index: 1001;
 }
 
 .bar {
   width: 26px;
   height: 3px;
-  background: #111;
+  background: #1c067a;
   transition: all 0.3s ease;
 }
 
-/* animación */
+
 .bar.open:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -229,10 +229,19 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* MOBILE */
+
 @media (max-width: 768px) {
+  nav {
+  position: relative;
+  height: fit-content ;
+}
+
   .hamburger {
-    display: flex;
+    display:flex;
+    position: absolute;
+    margin-top: -46px;
+     right: -50px;
+     
   }
 
   .nav-list {
