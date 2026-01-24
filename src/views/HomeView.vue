@@ -197,10 +197,6 @@ html, body {
   animation: moveLine 4s infinite alternate ease-in-out;
 }
 
-@keyframes moveLine {
-  50% { transform: translateX(-10%); opacity: 0.8; }
-  100% { transform: translateX(110%); opacity: 0.5; }
-}
 .contact-form {
   max-width: 600px;
   margin: 0 auto 3rem auto;
@@ -254,9 +250,19 @@ html, body {
 }
 
 
+
 .contact-map {
-  max-width: 1200px;
-  margin: 0 auto;      
-  padding: 0 1rem; 
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.contact-map iframe {
+  touch-action: manipulation;
+}
+
 </style>

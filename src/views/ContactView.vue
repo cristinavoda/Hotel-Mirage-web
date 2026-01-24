@@ -124,9 +124,25 @@ const handleSubmit = () => {
 .btn:hover {
   background: #999a9b;
 }
+.contact-map iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  display: block;
+}
 
+.contact-map {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
 
 .contact-map iframe {
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
+.contact-map iframe {
+  touch-action: manipulation;
+}
+
 </style>
