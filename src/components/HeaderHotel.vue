@@ -80,6 +80,8 @@
   color: #111;
 }
 .brand-mirage {
+  display: inline-flex;
+  white-space: nowrap;
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   font-weight: 500;
@@ -186,7 +188,10 @@
   }
 
   .brand-name {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+  }
+   .brand-mirage span {
+    display: inline;
   }
 }
 </style>

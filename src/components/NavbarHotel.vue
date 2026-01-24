@@ -1,46 +1,50 @@
 <template>
-  <nav class="['navbar', { sticky: isSticky }]">
+  <nav :class="['navbar', { sticky: isSticky }]">
 
-
+    <!-- HAMBURGER -->
     <div class="hamburger" @click="toggleMenu">
-      <div :class="{ bar: true, open: isOpen }"></div>
-      <div :class="{ bar: true, open: isOpen }"></div>
-      <div :class="{ bar: true, open: isOpen }"></div>
+      <span :class="['bar', { open: isOpen }]"></span>
+      <span :class="['bar', { open: isOpen }]"></span>
+      <span :class="['bar', { open: isOpen }]"></span>
     </div>
 
-    
-    <ul class="nav-list", { open: isOpen }> 
-
-      <li class="nav-item active">
+    <!-- MENU -->
+    <ul :class="['nav-list', { open: isOpen }]">
+      <li class="nav-item">
         <router-link to="/" @click="closeMenu" class="nav-link">
           Inicio
         </router-link>
       </li>
 
-      <li class="nav-item "> <router-link to="/habitaciones" @click="closeMenu" class="nav-link"> Habitaciones</router-link>
-        
-      </li>
-
       <li class="nav-item">
-        <router-link to="/experiencias" @click="closeMenu"class="nav-link">
-          Experencias
+        <router-link to="/habitaciones" @click="closeMenu" class="nav-link">
+          Habitaciones
         </router-link>
       </li>
 
-      <li class="nav-item"><router-link to="/galeria"  @click="closeMenu" class="nav-link">
-          Galeria
-        </router-link></li>
-      
- <li class="nav-item">
-  <router-link to="/contacto"  @click="closeMenu" class="nav-link">
-    Contacto
-  </router-link>
-</li>
+      <li class="nav-item">
+        <router-link to="/experiencias" @click="closeMenu" class="nav-link">
+          Experiencias
+        </router-link>
+      </li>
 
-</ul>
- <div class="line-separator"></div> 
+      <li class="nav-item">
+        <router-link to="/galeria" @click="closeMenu" class="nav-link">
+          Galería
+        </router-link>
+      </li>
+
+      <li class="nav-item">
+        <router-link to="/contacto" @click="closeMenu" class="nav-link">
+          Contacto
+        </router-link>
+      </li>
+    </ul>
+
+    <div class="line-separator"></div>
   </nav>
 </template>
+
 
 
 <script setup>
@@ -52,16 +56,21 @@ const isSticky = ref(false)
 const handleScroll = () => {
   isSticky.value = window.scrollY > 80
 }
-const isOpen = ref(false)
+
 const route = useRoute()
 
-function toggleMenu() {
+
+const isOpen = ref(false)
+
+const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }
 
-function closeMenu() {
+const closeMenu = () => {
   isOpen.value = false
 }
+
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 })
@@ -194,43 +203,56 @@ box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   opacity: 0;
   transform: translateY(-15px);
 }
- @media (max-width: 768px) {
-  
-  .navbar {
-    width: 100%;
-    margin-top: 10%;
-    margin-left: 15px;
-   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.1rem 0.3rem;
-    box-shadow: 3px 2px 8px rgba(179, 179, 182, 0.1);
-    transition: background-color 0.3s ease;
-    color:#343a3a;
-  }
-  .nav-list {
-  justify-content: center;
-  max-width: 1200px;
-  margin-top:10px;
-  padding: 0.8rem 0.1rem;
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  text-decoration: none;
-}
-  .nav-link {
-  position: relative;
-  font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
-  gap: 6rem;
-  font-weight: 500;
-  color: #111010;
-  text-decoration: none;
-  list-style: none;
-  padding: 0.5rem 0.4rem;
-  transition: color 0.3s ease;
-  
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
 }
 
+.bar {
+  width: 26px;
+  height: 3px;
+  background: #111;
+  transition: all 0.3s ease;
 }
+
+/* animación */
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+  }
+
+  .nav-list.open {
+    right: 0;
+  }
+}
+
+ 
 </style>

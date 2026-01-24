@@ -130,6 +130,7 @@ onUnmounted(() => {
   }
 
    @media (max-width: 768px) {
+    
     .field input,
 .field select {
   border: 1px solid #d1cece;
